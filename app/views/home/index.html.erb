@@ -1,0 +1,29 @@
+<h1 class="pt-5 pb-4">Mis Últimos Libros Prestados</h1>
+<div class="row">
+  <div class="col-md-12">
+    <% @books.each do |book| %>
+    <div class="card text-center mb-4">
+      <div class="card-header">
+        Libro Pestado
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><%= book.title%></h5>
+        <p class="card-text">
+          <strong>Autor:</strong>
+          <%= book.author %>
+        </p>
+      </div>
+      <div class="card-footer text-muted">
+        <span>
+          <strong>Creado el: </strong>
+          <%= book.created_at %> 
+        </span>|
+        <span>
+          <strong>Actualizado el: </strong>
+          <%= book.updated_at %> 
+        </span>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
